@@ -1,6 +1,6 @@
 # CIRCLe: Color Invariant Representation Learning for Unbiased Classification of Skin Lesions
 
-![model_fig](./assets/model_fig.png)
+![model_fig](./images/model_fig.png)
 <p align="center">
 Overview of CIRCLe.
       (a) The skin lesion image x with skin type z and diagnosis label y is passed through the feature extractor. The learned representation r goes through the classifier to obtain the predicted label.
