@@ -40,14 +40,14 @@ The `Fitzpatrick17K` dataset is available [here](https://github.com/mattgroh/fit
 # Training
 1) Train StarGAN:
 ```sh
-python train_stargan.py
+python train_stargan.py --model_save_dir ./gan-path
 ```
 
 2) Train `CIRCLe` (with or without the regularization loss):
 ```sh
-python main.py --use_reg_loss True
+python main.py --gan_path ./gan-path --use_reg_loss True 
 #or
-python main.py --use_reg_loss False
+python main.py --gan_path ./gan-path --use_reg_loss False
 ```
 
 - Train `CIRCLe` with different backbones:
