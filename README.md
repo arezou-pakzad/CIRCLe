@@ -13,14 +13,12 @@ Overview of CIRCLe.
 # Abstract
 While deep learning based approaches have demonstrated expert-level performance in dermatological diagnosis tasks, they have also been shown to exhibit biases toward certain demographic attributes, particularly skin types (e.g., light versus dark), a fairness concern that must be addressed. We propose `CIRCLe`, a skin color invariant deep representation learning method for improving fairness in skin lesion classification. CIRCLe is trained to classify images by utilizing a regularization loss that encourages images with the same diagnosis but different skin types to have similar latent representations.
 
-# Keywords
+## Keywords
 Fair AI, Skin Type Bias, Dermatology, Classification, Representation Learning.
 
 # Cite
 If you use our code, please cite our paper: 
-[CIRCLe: Color Invariant Representation Learning for Unbiased Classification of Skin Lesions](https://arxiv.org/abs/2208.13528)
-
-[PDF](https://www2.cs.sfu.ca/~hamarneh/ecopy/eccv_isic2022a.pdf)
+[CIRCLe: Color Invariant Representation Learning for Unbiased Classification of Skin Lesions](https://www2.cs.sfu.ca/~hamarneh/ecopy/eccv_isic2022a.pdf)
 
 The corresponding bibtex entry is:
 
@@ -33,4 +31,32 @@ The corresponding bibtex entry is:
 }
 ```
 
+<!-- # Code
+Code for StarGan is modified from https://github.com/yunjey/stargan -->
+
+# Data
+The `Fitzpatrick17K` dataset is available [here](https://github.com/mattgroh/fitzpatrick17k).
+
+# Training
+1) Train StarGAN:
+```sh
+python train_stargan.py
+```
+
+2) Train `CIRCLe` (with or without the regularization loss):
+```sh
+python main.py --use_reg_loss True
+#or
+python main.py --use_reg_loss False
+```
+
+- Train `CIRCLe` with different backbones:
+```sh
+python main.py --base vgg16 
+python main.py --base densenet121
+python main.py --base resnet18
+python main.py --base resnet50
+python main.py --base mobilenetv3l
+python main.py --base mobilenetv2
+```
 
