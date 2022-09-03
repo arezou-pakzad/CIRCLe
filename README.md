@@ -25,7 +25,7 @@ The corresponding bibtex entry is:
 ```
 @inproceedings{pakzad2022circle,
     title = {{CIRCLe}: Color Invariant Representation Learning for Unbiased Classification of Skin Lesions},
-    author = {Pakzad, Arezou and Abhishek, Kumar and Harmaneh, Ghassan},
+    author = {Pakzad, Arezou and Abhishek, Kumar and Hamarneh, Ghassan},
     booktitle = {Proceedings of the 17t hEuropean Conference on Computer Vision (ECCV) - ISIC Skin Image Analysis Workshop},
     year = {2022},
 }
