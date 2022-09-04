@@ -1,5 +1,8 @@
 # CIRCLe: Color Invariant Representation Learning for Unbiased Classification of Skin Lesions
 
+This repository holds the source accompanying our [ECCV ISIC Workshop 2022 paper](https://www2.cs.sfu.ca/~hamarneh/ecopy/eccv_isic2022a.pdf).
+
+
 ![model_fig](./images/model_fig.png)
 <p align="center">
 Overview of CIRCLe.
@@ -22,7 +25,7 @@ If you use our code, please cite our paper:
 
 The corresponding bibtex entry is:
 
-```
+```bibtex
 @inproceedings{pakzad2022circle,
     title = {{CIRCLe}: Color Invariant Representation Learning for Unbiased Classification of Skin Lesions},
     author = {Pakzad, Arezou and Abhishek, Kumar and Hamarneh, Ghassan},
@@ -34,24 +37,32 @@ The corresponding bibtex entry is:
 <!-- # Code
 Code for StarGan is modified from https://github.com/yunjey/stargan -->
 
+# Requirements
+Install the requirements:
+```python
+conda create -n circle-env python=3.8
+conda activate circle-env
+pip install -r requirements.txt
+```
+
 # Data
 The `Fitzpatrick17K` dataset is available [here](https://github.com/mattgroh/fitzpatrick17k).
 
 # Training
 1) Train StarGAN:
-```sh
+```python
 python train_stargan.py --model_save_dir ./gan-path
 ```
 
 2) Train `CIRCLe` (with or without the regularization loss):
-```sh
+```python
 python main.py --gan_path ./gan-path --use_reg_loss True 
 #or
 python main.py --gan_path ./gan-path --use_reg_loss False
 ```
 
 - Train `CIRCLe` with different backbones:
-```sh
+```python
 python main.py --base vgg16 
 python main.py --base densenet121
 python main.py --base resnet18
