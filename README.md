@@ -2,6 +2,8 @@
 
 This repository holds the source accompanying our [ECCV ISIC Workshop 2022 paper](https://www2.cs.sfu.ca/~hamarneh/ecopy/eccv_isic2022a.pdf).
 
+[Paper](https://link.springer.com/chapter/10.1007/978-3-031-25069-9_14) | [Arxiv](https://arxiv.org/abs/2208.13528) | [DOI](https://doi.org/10.1007/978-3-031-25069-9_14) | [Video](https://www.youtube.com/watch?v=7v1YWy7biWI) | [Slides](https://workshop2022.isic-archive.com/slides_pakzad.pdf)
+
 
 ![model_fig](./images/model_fig.png)
 <p align="center">
@@ -31,6 +33,8 @@ The corresponding bibtex entry is:
     author = {Pakzad, Arezou and Abhishek, Kumar and Hamarneh, Ghassan},
     booktitle = {Proceedings of the 17th European Conference on Computer Vision (ECCV) - ISIC Skin Image Analysis Workshop},
     year = {2022},
+    pages = {203-219},
+    doi = {10.1007/978-3-031-25069-9_14}
 }
 ```
 
